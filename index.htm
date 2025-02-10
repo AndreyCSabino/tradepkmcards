@@ -173,7 +173,7 @@ img.card-avatar { width: 100%; position: relative; transition: all .2s ease-in-o
 
 var gQtdCartas = 0;
 var gAbaAtiva = "bPokemon";
-var gaPokemon = [];
+var gaPokemon = ["Rotom Corte|008/142|comum|Normal"];
 			 /*["Rotom Corte|008/142|comum|Normal",
 				"Finneon|035/142|comum|Normal",
 				"Chatot|132/162|comum|Normal",
@@ -350,7 +350,7 @@ function carregarRaridade(pCodigo, pRaridade) {
 		case 'rara':
 			document.getElementById('lab'+pCodigo).innerHTML = "★";
 			break;
-		case 'promo':
+		case 'promocional':
 			document.getElementById('lab'+pCodigo).innerHTML = "✩";
 			document.getElementById('ext'+pCodigo).innerHTML = "Promocional";
 			break;
@@ -362,11 +362,11 @@ function carregarRaridade(pCodigo, pRaridade) {
 			document.getElementById('lab'+pCodigo).innerHTML = "<div style='color:#A7A9AD;'>★★</div>";
 			document.getElementById('ext'+pCodigo).innerHTML = "Rara Ultra";
 			break;
-		case 'ilustrara':
+		case 'ilustracaorara':
 			document.getElementById('lab'+pCodigo).innerHTML = "<div style='color:#FCB912;'>★</div>";
 			document.getElementById('ext'+pCodigo).innerHTML = "Ilustração Rara";
 			break;
-		case 'ilustraraesp':
+		case 'ilustracaoraraespecial':
 			document.getElementById('lab'+pCodigo).innerHTML = "<div style='color:#FCB912;'>★★</div>";
 			document.getElementById('ext'+pCodigo).innerHTML = "Ilust. Rara Especial";
 			break;
