@@ -2,7 +2,7 @@
 
 <html lang="pt_br"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-<title>Trade</title>
+<title>Cards</title>
 <link href="https://drive.google.com/thumbnail?id=1KkYLpTm4K12-IoS55IztjH1at3mi8oDk" rel="icon" type="image/x-icon">
 
 
@@ -10,7 +10,7 @@
 <meta content="#E30C55" name="theme-color">
 <meta content="pt_br" property="og:locale">
 <meta content="article" property="og:type">
-<meta content="Trade" property="og:title">
+<meta content="Cards" property="og:title">
 
 
 <style id="page-skin-1" type="text/css">
@@ -28,6 +28,7 @@
 --body-font:'Montserrat', Arial, sans-serif;
 --title-font:'Montserrat', Arial, sans-serif;
 --text-font:'Nunito Sans', Arial, sans-serif;
+--title-color:#373E59;
 --body-bg-color:#f5f6f7;
 --main-color:#E30C55;
 --text-color:#000000;
@@ -58,12 +59,12 @@ html{position:relative;word-break:break-word;word-wrap:break-word;text-rendering
 body{position:relative;background:var(--body-bg);background-color:var(--body-bg-color);font-family:var(--body-font);font-size:14px;color:var(--text-color);font-weight:400;font-style:normal;line-height:1.4em}
 h1,h2,h3,h4,h5,h6{font-family:var(--title-font);font-weight:700}
 a,input,button{transition:all .0s ease}
+.row-x1{width:1275px;max-width:100%}
 //.row-x1{width:1390px;max-width:100%}
-.row-x1{width:1175px;max-width:100%}
 .flex-c{display:flex;justify-content:center}
 .flex-col{display:flex;flex-direction:column}
 #content-wrapper{float:left;width:100%;overflow:hidden;padding:50px 0}
-.title-wrap{display:flex;justify-content:space-around;height:30px;margin:0 0 20px;border-bottom:2px solid var(--border-color)}
+.title-wrap{display:flex;justify-content:space-around;height:37px;margin:0 0 20px;border-bottom:2px solid var(--border-color)}
 .title-wrap > .title{position:relative;height:30px;font-size:15px;color:var(--widget-title-color);font-weight:700;text-transform:uppercase;line-height:1;margin:0}
 .item-post-inner{background-color:var(--widget-bg);padding:20px;border-radius:var(--radius);box-shadow:var(--widget-shadow);}
 #post-body{position:relative;float:left;width:100%;font-family:var(--text-font);font-size:16px;color:var(--text-color);line-height:1.6em;margin:25px 0 0}
@@ -78,6 +79,7 @@ a,input,button{transition:all .0s ease}
 #back-top:before{content:'\e5ce';font-family:'Material Icons Round';font-weight:400}
 #back-top.show{opacity:1;visibility:visible}
 #back-top:hover{background-color:var(--button-hover-bg);color:var(--button-hover-color)}
+.nav-active #back-top{opacity:0!important}
 
 /*//CÓDIGO DAS PÁGINAS DO MENU//*/
 .is-page #post-body {margin:0px !important;}
@@ -88,49 +90,37 @@ a,input,button{transition:all .0s ease}
 /* OUTLINE AO FOCO 
 *:focus {outline: 3px solid var(--main-color);} */
 
-div.card { position:relative;	width: 195px;	height:250px; box-shadow: 0px 0px 25px -5px rgba(183, 189, 193, 0.4); border-radius: 12px; text-align: center; margin: 0px 10px 30px 10px; display: inline-block; vertical-align: middle; }
-div.card:hover {box-shadow: 0px 0px 41px -10px rgba(183, 189, 193, 0.9); bottom: 2px;}
+div.card { position:relative; width: 195px; height:290px; box-shadow: 0px 0px 25px -5px rgba(183, 189, 193, 0.7); border-radius: 12px; text-align: center; margin: 0px 20px 30px 20px; display: inline-block; vertical-align: middle; }
+/*bottom: 2px; width: 140px;
+div.card:hover {box-shadow: 0px 0px 41px -10px rgba(183, 189, 193, 0.9);}*/
 html.is-dark div.card {box-shadow: 0px 0px 25px -5px rgba(0, 0, 0, 0.6);}
 html.is-dark div.card:hover {box-shadow: 0px 0px 41px -10px rgba(0, 0, 0, 0.9);}
 div.card-inner {margin: 5px 5px 5px 5px; border: 0px solid purple; line-height: 1;}
 div.card-inner:before {  content: "";  width: 110px;  height: 110px;  position: absolute; top: 20.3%; left: 22%; z-index: 0;  -webkit-mask-image: url('https://raw.githubusercontent.com/lbns14/Projeto-Pokedex/main/pokeball.svg');  background-size: 100%;  opacity:.3;  background-color: gray;  opacity: .2; } 
 
-.num {border: 0px solid orange; font-weight:500; font-size:11px; line-height: 15px; color: var(--meta-color); white-space:nowrap;}
-img.card-avatar { width: 140px; position: relative; transition: all .2s ease-in-out; -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out;}
+img.card-avatar { width: 100%; position: relative; transition: all .2s ease-in-out; -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out;}
 
-.fichario{width:660px; display: inline-table}
-.folha{font-weight: 600}
+.zoom{position: absolute; z-index: 98;	transform: translate(9%, -31.2%);}
+.labNome{position: absolute; right: 0; left: 0; z-index: 1; color: color-mix(in srgb, currentColor 0%, transparent);}
+.divBot{position: absolute; bottom: 3px; left: 0px; right: 0px;}
+.labRaridade{border: 0px solid gold; height:15px; width:0px; white-space:nowrap; line-height:0.5; letter-spacing:-2px; padding-top: 4px; padding-left: 2px; float: left; position: relative; font-size: 16px;}
+.inpNumeracao{border: 0px solid blue; min-width: 30px; field-sizing: content; font-size: 13px; float: left; position: relative;}
+.labExtra{border: 0px solid red; min-width: 60px; font-size: 13px; letter-spacing: -.3px; text-align: right; float: right; line-height: normal;}
 
-.pagina{width:660px; display: inline-table}
-.paginaTitulo{font-weight: 600}
+.titleButton{border: 2px solid #ffffff; position: relative; width: 100%; border-radius: 12px 12px 0 0; font-size: 16px; line-height: 2.3;}
+.titleButton:hover{border: 2px solid rgba(155, 155, 155, 0.1); border-bottom: 2px solid #ffffff; font-weight:600;}
+.titleButtonClick{border: 2px solid rgba(155, 155, 155, 0.1); border-bottom: 2px solid #ffffff; font-weight:600; top: 2px;}
 
-.b-right{float:right; position:absolute; right:0}
-
-.zoom {position: absolute; z-index: 99;	transform: translate(9%, -28%);}
-
-.divTop {height: 31px; display: flex; flex-direction: column; justify-content: center;}
-
-.divBot {position: absolute; bottom: 0px; left: 0px; right: 0px; align-items: center;}
-.labelA {
-    border: 0px solid gold;
-    height: 15px;
-    width: 0px;
-    white-space: nowrap;
-    line-height: 0.5;
-    letter-spacing: -2px;
-    padding-top: 2px;
-    padding-left: 2px;
-    float: left;
-}
-.inputA {
-    border: 0px solid blue;
-	min-width: 30px;
-    field-sizing: content;
-    font-size: 11px;
-    float: left;
-}
-.selectA{border: 0px solid red; height: 15px; field-sizing: content; min-width: 30px; font-size: 11px; letter-spacing: -.3px; text-align: right; float: right; pointer-events:none;}
-.selectB{border: 0px solid red; height: 15px; min-width: 30px; font-size: 11px; letter-spacing: -.3px; text-align: right; float: right;	padding-right: 7px; pointer-events:none;}
+#bPokemon:hover{color: #DC143C;}
+#bPokemon.titleButtonClick{color: #DC143C;}
+#bItem:hover{color: #1176C3;}
+#bItem.titleButtonClick{color: #1176C3;}
+#bApoiador:hover{color: #ED552D;}
+#bApoiador.titleButtonClick{color: #ED552D;}
+#bEstadio:hover{color: #54C030;}
+#bEstadio.titleButtonClick{color: #54C030;}
+#bFerramenta:hover{color: #6E58B3;}
+#bFerramenta.titleButtonClick{color: #6E58B3;}
 
 @media screen and (max-width: 500px){
   .title {font-size:16px !important;}
@@ -144,68 +134,36 @@ img.card-avatar { width: 140px; position: relative; transition: all .2s ease-in-
 
 </style>
 
-</head><body class="is-single is-page">
+</head>
+<body class="is-single is-page" onload="carregarCartas();">
 <div class="flex-c" id="content-wrapper">
-	<div class="container row-x1 flex-sb" style="transform: none;">
-		<main class="has-margin" id="main-wrapper" style="position: relative; overflow: visible; box-sizing: border-box; min-height: 1px;">
-		<div class="item-post-inner flex-col">
-			<div class="post-body entry-content" id="post-body">
-				
-				<div class="b-right">
-					<button id="bAdicionar" onclick="clickAdicionar(); blur()" type="button" style="margin-top:20px; display:none">Adicionar</button>
-				</div>
+<div class="container row-x1 flex-sb" style="transform: none;">
+<div class="item-post-inner flex-col">
 
-<!-- awa style="background: blue; 
-    style="color: red;" Dudunsparce Forma Três Segmentos -->
 
-<div class="list-container" id="kanto">
-	<div class="title-wrap related-title" id="I" style="margin-top: 10px;">
-		<h2 class="title kanto" style="font-size: 26px; font-weight: 700;">CARTAS REPETIDAS</h2>
+<div class="list-container" id="divPrincipal">
+	<div class="title-wrap related-title" id="I" style="margin-top: 10px;">   
+		<button type="button" id="bPokemon" class="titleButton titleButtonClick" onclick="ativarAba('bPokemon'); blur()">Pokémon</button>
+		<button type="button" id="bItem" class="titleButton" onclick="ativarAba('bItem'); blur()">Item</button>
+		<button type="button" id="bApoiador" class="titleButton" onclick="ativarAba('bApoiador'); blur()">Apoiador</button>
+		<button type="button" id="bEstadio" class="titleButton" onclick="ativarAba('bEstadio'); blur()">Estádio</button>
+		<button type="button" id="bFerramenta" class="titleButton" onclick="ativarAba('bFerramenta'); blur()">Ferramenta</button>
 	</div>
+
 	<center style="padding: 30px; 0px; 15px; 15px; ">
-		<div id="div001" style="display: flex; flex-direction: row; flex-wrap: wrap;">
 
-<div class="card" id="div" 1"=""><div class="card-inner"><div class="divTop">Rotom Corte</div><div style="display: inline-block;"><img id="img1" class="card-avatar" onmousemove="zoomIn(1)" onmouseout="zoomOut(1)" src="https://dz3we2x72f7ol.cloudfront.net/expansions/stellar-crown/pt-br/SV07_PTBR_8.png"><img id="zoo1" class="zoom" src="https://dz3we2x72f7ol.cloudfront.net/expansions/stellar-crown/pt-br/SV07_PTBR_8.png" style="max-width: 200%; display: none;"></div><div class="divBot"><input type="text" class="inputA" onclick="select(); blur()" value="008/142" readonly=""><label id="lab1" class="labelA">●</label><select id="sel1" class="selectA" onchange="changeSel(1, this); blur()" style="display: none;"><option value="vazio"></option><option value="comum" selected="true">Comum</option><option value="incomum">Incomum	</option><option value="rara">Rara</option><option value="promo">Promocional</option><option value="raradupla">Rara Dupla</option><option value="raraultra">Rara Ultra</option><option value="fullart">Ilustração Rara</option><option value="fullartesp">Ilustração Rara Especial</option><option value="rarasecreta">Rara Secreta</option></select> <select id="ext1" class="selectB" onchange="changeExt(1, this); blur()" style="display: inline-block;"><option value="vazio"></option><option value="normal" selected="true">Normal</option><option value="foil">Foil</option><option value="reversefoil">Reverse Foil</option></select></div></div></div>
-
-<div class="card" id="div" 2"=""><div class="card-inner"><div class="divTop">Finneon</div><div style="display: inline-block;"><img id="img2" class="card-avatar" onmousemove="zoomIn(2)" onmouseout="zoomOut(2)" src="https://dz3we2x72f7ol.cloudfront.net/expansions/stellar-crown/pt-br/SV07_PTBR_35.png"><img id="zoo2" class="zoom" src="https://dz3we2x72f7ol.cloudfront.net/expansions/stellar-crown/pt-br/SV07_PTBR_35.png" style="max-width: 200%; display: none;"></div><div class="divBot"><input type="text" class="inputA" onclick="select(); blur()" value="035/142" readonly=""><label id="lab2" class="labelA">●</label><select id="sel2" class="selectA" onchange="changeSel(2, this); blur()" style="display: none;"><option value="vazio"></option><option value="comum" selected="true">Comum</option><option value="incomum">Incomum	</option><option value="rara">Rara</option><option value="promo">Promocional</option><option value="raradupla">Rara Dupla</option><option value="raraultra">Rara Ultra</option><option value="fullart">Ilustração Rara</option><option value="fullartesp">Ilustração Rara Especial</option><option value="rarasecreta">Rara Secreta</option></select> <select id="ext2" class="selectB" onchange="changeExt(2, this); blur()" style="display: inline-block;"><option value="vazio"></option><option value="normal" selected="true">Normal</option><option value="foil">Foil</option><option value="reversefoil">Reverse Foil</option></select></div></div></div>
-
-<div class="card" id="div" 3"=""><div class="card-inner"><div class="divTop">Chatot</div><div style="display: inline-block;"><img id="img3" class="card-avatar" onmousemove="zoomIn(3)" onmouseout="zoomOut(3)" src="https://dz3we2x72f7ol.cloudfront.net/expansions/temporal-forces/pt-br/SV05_PTBR_132.png"><img id="zoo3" class="zoom" src="https://dz3we2x72f7ol.cloudfront.net/expansions/temporal-forces/pt-br/SV05_PTBR_132.png" style="max-width: 200%; display: none;"></div><div class="divBot"><input type="text" class="inputA" onclick="select(); blur()" value="132/162" readonly=""><label id="lab3" class="labelA">●</label><select id="sel3" class="selectA" onchange="changeSel(3, this); blur()" style="display: none;"><option value="vazio"></option><option value="comum" selected="true">Comum</option><option value="incomum">Incomum	</option><option value="rara">Rara</option><option value="promo">Promocional</option><option value="raradupla">Rara Dupla</option><option value="raraultra">Rara Ultra</option><option value="fullart">Ilustração Rara</option><option value="fullartesp">Ilustração Rara Especial</option><option value="rarasecreta">Rara Secreta</option></select> <select id="ext3" class="selectB" onchange="changeExt(3, this); blur()" style="display: inline-block;"><option value="vazio"></option><option value="normal" selected="true">Normal</option><option value="foil">Foil</option><option value="reversefoil">Reverse Foil</option></select></div></div></div>
-
-<div class="card" id="div" 4"=""><div class="card-inner"><div class="divTop">Relicanth</div><div style="display: inline-block;"><img id="img4" class="card-avatar" onmousemove="zoomIn(4)" onmouseout="zoomOut(4)" src="https://dz3we2x72f7ol.cloudfront.net/expansions/temporal-forces/pt-br/SV05_PTBR_84.png"><img id="zoo4" class="zoom" src="https://dz3we2x72f7ol.cloudfront.net/expansions/temporal-forces/pt-br/SV05_PTBR_84.png" style="max-width: 200%; display: none;"></div><div class="divBot"><input type="text" class="inputA" onclick="select(); blur()" value="084/162" readonly=""><label id="lab4" class="labelA">★</label><select id="sel4" class="selectA" onchange="changeSel(4, this); blur()" style="display: none;"><option value="vazio"></option><option value="comum">Comum</option><option value="incomum">Incomum	</option><option value="rara" selected="true">Rara</option><option value="promo">Promocional</option><option value="raradupla">Rara Dupla</option><option value="raraultra">Rara Ultra</option><option value="fullart">Ilustração Rara</option><option value="fullartesp">Ilustração Rara Especial</option><option value="rarasecreta">Rara Secreta</option></select> <select id="ext4" class="selectB" onchange="changeExt(4, this); blur()" style="display: inline-block;"><option value="vazio"></option><option value="normal">Normal</option><option value="foil" selected="true">Foil</option><option value="reversefoil">Reverse Foil</option></select></div></div></div>
-
-<div class="card" id="div" 5"=""><div class="card-inner"><div class="divTop">Croagunk</div><div style="display: inline-block;"><img id="img5" class="card-avatar" onmousemove="zoomIn(5)" onmouseout="zoomOut(5)" src="https://dz3we2x72f7ol.cloudfront.net/expansions/shrouded-fable/pt-br/SV6pt5_PTBR_23.png"><img id="zoo5" class="zoom" src="https://dz3we2x72f7ol.cloudfront.net/expansions/shrouded-fable/pt-br/SV6pt5_PTBR_23.png" style="max-width: 200%; display: none;"></div><div class="divBot"><input type="text" class="inputA" onclick="select(); blur()" value="023/064" readonly=""><label id="lab5" class="labelA">●</label><select id="sel5" class="selectA" onchange="changeSel(5, this); blur()" style="display: none;"><option value="vazio"></option><option value="comum" selected="true">Comum</option><option value="incomum">Incomum	</option><option value="rara">Rara</option><option value="promo">Promocional</option><option value="raradupla">Rara Dupla</option><option value="raraultra">Rara Ultra</option><option value="fullart">Ilustração Rara</option><option value="fullartesp">Ilustração Rara Especial</option><option value="rarasecreta">Rara Secreta</option></select> <select id="ext5" class="selectB" onchange="changeExt(5, this); blur()" style="display: inline-block;"><option value="vazio"></option><option value="normal" selected="true">Normal</option><option value="foil">Foil</option><option value="reversefoil">Reverse Foil</option></select></div></div></div>
-
-<div class="card" id="div" 6"=""><div class="card-inner"><div class="divTop">Ursaluna Lua Sangrenta</div><div style="display: inline-block;"><img id="img6" class="card-avatar" onmousemove="zoomIn(6)" onmouseout="zoomOut(6)" src="https://dz3we2x72f7ol.cloudfront.net/expansions/shrouded-fable/pt-br/SV6pt5_PTBR_25.png"><img id="zoo6" class="zoom" src="https://dz3we2x72f7ol.cloudfront.net/expansions/shrouded-fable/pt-br/SV6pt5_PTBR_25.png" style="max-width: 200%; display: none;"></div><div class="divBot"><input type="text" class="inputA" onclick="select(); blur()" value="025/064" readonly=""><label id="lab6" class="labelA">★</label><select id="sel6" class="selectA" onchange="changeSel(6, this); blur()" style="display: none;"><option value="vazio"></option><option value="comum">Comum</option><option value="incomum">Incomum	</option><option value="rara" selected="true">Rara</option><option value="promo">Promocional</option><option value="raradupla">Rara Dupla</option><option value="raraultra">Rara Ultra</option><option value="fullart">Ilustração Rara</option><option value="fullartesp">Ilustração Rara Especial</option><option value="rarasecreta">Rara Secreta</option></select> <select id="ext6" class="selectB" onchange="changeExt(6, this); blur()" style="display: inline-block;"><option value="vazio"></option><option value="normal">Normal</option><option value="foil" selected="true">Foil</option><option value="reversefoil">Reverse Foil</option></select></div></div></div>
-
-<div class="card" id="div" 7"=""><div class="card-inner"><div class="divTop">Choque Areia</div><div style="display: inline-block;"><img id="img7" class="card-avatar" onmousemove="zoomIn(7)" onmouseout="zoomOut(7)" src="https://dz3we2x72f7ol.cloudfront.net/expansions/temporal-forces/pt-br/SV05_PTBR_98.png"><img id="zoo7" class="zoom" src="https://dz3we2x72f7ol.cloudfront.net/expansions/temporal-forces/pt-br/SV05_PTBR_98.png" style="max-width: 200%; display: none;"></div><div class="divBot"><input type="text" class="inputA" onclick="select(); blur()" value="098/162" readonly=""><label id="lab7" class="labelA">♦</label><select id="sel7" class="selectA" onchange="changeSel(7, this); blur()" style="display: none;"><option value="vazio"></option><option value="comum">Comum</option><option value="incomum" selected="true">Incomum	</option><option value="rara">Rara</option><option value="promo">Promocional</option><option value="raradupla">Rara Dupla</option><option value="raraultra">Rara Ultra</option><option value="fullart">Ilustração Rara</option><option value="fullartesp">Ilustração Rara Especial</option><option value="rarasecreta">Rara Secreta</option></select> <select id="ext7" class="selectB" onchange="changeExt(7, this); blur()" style="display: inline-block;"><option value="vazio"></option><option value="normal" selected="true">Normal</option><option value="foil">Foil</option><option value="reversefoil">Reverse Foil</option></select></div></div></div>
-
-<div class="card" id="div" 8"=""><div class="card-inner"><div class="divTop">Lileep</div><div style="display: inline-block;"><img id="img8" class="card-avatar" onmousemove="zoomIn(8)" onmouseout="zoomOut(8)" src="https://dz3we2x72f7ol.cloudfront.net/expansions/stellar-crown/pt-br/SV07_PTBR_5.png"><img id="zoo8" class="zoom" src="https://dz3we2x72f7ol.cloudfront.net/expansions/stellar-crown/pt-br/SV07_PTBR_5.png" style="max-width: 200%; display: none;"></div><div class="divBot"><input type="text" class="inputA" onclick="select(); blur()" value="005/142" readonly=""><label id="lab8" class="labelA">●</label><select id="sel8" class="selectA" onchange="changeSel(8, this); blur()" style="display: none;"><option value="vazio"></option><option value="comum" selected="true">Comum</option><option value="incomum">Incomum	</option><option value="rara">Rara</option><option value="promo">Promocional</option><option value="raradupla">Rara Dupla</option><option value="raraultra">Rara Ultra</option><option value="fullart">Ilustração Rara</option><option value="fullartesp">Ilustração Rara Especial</option><option value="rarasecreta">Rara Secreta</option></select> <select id="ext8" class="selectB" onchange="changeExt(8, this); blur()" style="display: inline-block;"><option value="vazio"></option><option value="normal" selected="true">Normal</option><option value="foil">Foil</option><option value="reversefoil">Reverse Foil</option></select></div></div></div>
-
-<div class="card" id="div" 9"=""><div class="card-inner"><div class="divTop">Mawile</div><div style="display: inline-block;"><img id="img9" class="card-avatar" onmousemove="zoomIn(9)" onmouseout="zoomOut(9)" src="https://dz3we2x72f7ol.cloudfront.net/expansions/temporal-forces/pt-br/SV05_PTBR_112.png"><img id="zoo9" class="zoom" src="https://dz3we2x72f7ol.cloudfront.net/expansions/temporal-forces/pt-br/SV05_PTBR_112.png" style="max-width: 200%; display: none;"></div><div class="divBot"><input type="text" class="inputA" onclick="select(); blur()" value="112/162" readonly=""><label id="lab9" class="labelA">●</label><select id="sel9" class="selectA" onchange="changeSel(9, this); blur()" style="display: none;"><option value="vazio"></option><option value="comum" selected="true">Comum</option><option value="incomum">Incomum	</option><option value="rara">Rara</option><option value="promo">Promocional</option><option value="raradupla">Rara Dupla</option><option value="raraultra">Rara Ultra</option><option value="fullart">Ilustração Rara</option><option value="fullartesp">Ilustração Rara Especial</option><option value="rarasecreta">Rara Secreta</option></select> <select id="ext9" class="selectB" onchange="changeExt(9, this); blur()" style="display: inline-block;"><option value="vazio"></option><option value="normal" selected="true">Normal</option><option value="foil">Foil</option><option value="reversefoil">Reverse Foil</option></select></div></div></div>
-
-<div class="card" id="div" 10"=""><div class="card-inner"><div class="divTop">Trapinch</div><div style="display: inline-block;"><img id="img10" class="card-avatar" onmousemove="zoomIn(10)" onmouseout="zoomOut(10)" src="https://dz3we2x72f7ol.cloudfront.net/expansions/surging-sparks/pt-br/SV08_PTBR_104.png"><img id="zoo10" class="zoom" src="https://dz3we2x72f7ol.cloudfront.net/expansions/surging-sparks/pt-br/SV08_PTBR_104.png" style="max-width: 200%; display: none;"></div><div class="divBot"><input type="text" class="inputA" onclick="select(); blur()" value="104/191" readonly=""><label id="lab10" class="labelA">●</label><select id="sel10" class="selectA" onchange="changeSel(10, this); blur()" style="display: none;"><option value="vazio"></option><option value="comum" selected="true">Comum</option><option value="incomum">Incomum	</option><option value="rara">Rara</option><option value="promo">Promocional</option><option value="raradupla">Rara Dupla</option><option value="raraultra">Rara Ultra</option><option value="fullart">Ilustração Rara</option><option value="fullartesp">Ilustração Rara Especial</option><option value="rarasecreta">Rara Secreta</option></select> <select id="ext10" class="selectB" onchange="changeExt(10, this); blur()" style="display: inline-block;"><option value="vazio"></option><option value="normal" selected="true">Normal</option><option value="foil">Foil</option><option value="reversefoil">Reverse Foil</option></select></div></div></div>
-
-<div class="card" id="div" 11"=""><div class="card-inner"><div class="divTop">Breloom</div><div style="display: inline-block;"><img id="img11" class="card-avatar" onmousemove="zoomIn(11)" onmouseout="zoomOut(11)" src="https://dz3we2x72f7ol.cloudfront.net/expansions/temporal-forces/pt-br/SV05_PTBR_7.png"><img id="zoo11" class="zoom" src="https://dz3we2x72f7ol.cloudfront.net/expansions/temporal-forces/pt-br/SV05_PTBR_7.png" style="max-width: 200%; display: none;"></div><div class="divBot"><input type="text" class="inputA" onclick="select(); blur()" value="007/162" readonly=""><label id="lab11" class="labelA">●</label><select id="sel11" class="selectA" onchange="changeSel(11, this); blur()" style="display: none;"><option value="vazio"></option><option value="comum" selected="true">Comum</option><option value="incomum">Incomum	</option><option value="rara">Rara</option><option value="promo">Promocional</option><option value="raradupla">Rara Dupla</option><option value="raraultra">Rara Ultra</option><option value="fullart">Ilustração Rara</option><option value="fullartesp">Ilustração Rara Especial</option><option value="rarasecreta">Rara Secreta</option></select> <select id="ext11" class="selectB" onchange="changeExt(11, this); blur()" style="display: inline-block;"><option value="vazio"></option><option value="normal" selected="true">Normal</option><option value="foil">Foil</option><option value="reversefoil">Reverse Foil</option></select></div></div></div>
-
-<div class="card" id="div" 12"=""><div class="card-inner"><div class="divTop">Hoothoot</div><div style="display: inline-block;"><img id="img12" class="card-avatar" onmousemove="zoomIn(12)" onmouseout="zoomOut(12)" src="https://dz3we2x72f7ol.cloudfront.net/expansions/stellar-crown/pt-br/SV07_PTBR_114.png"><img id="zoo12" class="zoom" src="https://dz3we2x72f7ol.cloudfront.net/expansions/stellar-crown/pt-br/SV07_PTBR_114.png" style="max-width: 200%; display: none;"></div><div class="divBot"><input type="text" class="inputA" onclick="select(); blur()" value="114/142" readonly=""><label id="lab12" class="labelA">●</label><select id="sel12" class="selectA" onchange="changeSel(12, this); blur()" style="display: none;"><option value="vazio"></option><option value="comum" selected="true">Comum</option><option value="incomum">Incomum	</option><option value="rara">Rara</option><option value="promo">Promocional</option><option value="raradupla">Rara Dupla</option><option value="raraultra">Rara Ultra</option><option value="fullart">Ilustração Rara</option><option value="fullartesp">Ilustração Rara Especial</option><option value="rarasecreta">Rara Secreta</option></select> <select id="ext12" class="selectB" onchange="changeExt(12, this); blur()" style="display: inline-block;"><option value="vazio"></option><option value="normal" selected="true">Normal</option><option value="foil">Foil</option><option value="reversefoil">Reverse Foil</option></select></div></div></div>
-
-<div class="card" id="div" 13"=""><div class="card-inner"><div class="divTop">Sableye</div><div style="display: inline-block;"><img id="img13" class="card-avatar" onmousemove="zoomIn(13)" onmouseout="zoomOut(13)" src="https://dz3we2x72f7ol.cloudfront.net/expansions/temporal-forces/pt-br/SV05_PTBR_107.png"><img id="zoo13" class="zoom" src="https://dz3we2x72f7ol.cloudfront.net/expansions/temporal-forces/pt-br/SV05_PTBR_107.png" style="max-width: 200%; display: none;"></div><div class="divBot"><input type="text" class="inputA" onclick="select(); blur()" value="107/162" readonly=""><label id="lab13" class="labelA">♦</label><select id="sel13" class="selectA" onchange="changeSel(13, this); blur()" style="display: none;"><option value="vazio"></option><option value="comum">Comum</option><option value="incomum" selected="true">Incomum	</option><option value="rara">Rara</option><option value="promo">Promocional</option><option value="raradupla">Rara Dupla</option><option value="raraultra">Rara Ultra</option><option value="fullart">Ilustração Rara</option><option value="fullartesp">Ilustração Rara Especial</option><option value="rarasecreta">Rara Secreta</option></select> <select id="ext13" class="selectB" onchange="changeExt(13, this); blur()" style="display: inline-block;"><option value="vazio"></option><option value="normal" selected="true">Normal</option><option value="foil">Foil</option><option value="reversefoil">Reverse Foil</option></select></div></div></div>
-
-<div class="card" id="div" 14"=""><div class="card-inner"><div class="divTop">Lapras</div><div style="display: inline-block;"><img id="img14" class="card-avatar" onmousemove="zoomIn(14)" onmouseout="zoomOut(14)" src="https://dz3we2x72f7ol.cloudfront.net/expansions/stellar-crown/pt-br/SV07_PTBR_31.png"><img id="zoo14" class="zoom" src="https://dz3we2x72f7ol.cloudfront.net/expansions/stellar-crown/pt-br/SV07_PTBR_31.png" style="max-width: 200%; display: none;"></div><div class="divBot"><input type="text" class="inputA" onclick="select(); blur()" value="031/142" readonly=""><label id="lab14" class="labelA">♦</label><select id="sel14" class="selectA" onchange="changeSel(14, this); blur()" style="display: none;"><option value="vazio"></option><option value="comum">Comum</option><option value="incomum" selected="true">Incomum	</option><option value="rara">Rara</option><option value="promo">Promocional</option><option value="raradupla">Rara Dupla</option><option value="raraultra">Rara Ultra</option><option value="fullart">Ilustração Rara</option><option value="fullartesp">Ilustração Rara Especial</option><option value="rarasecreta">Rara Secreta</option></select> <select id="ext14" class="selectB" onchange="changeExt(14, this); blur()" style="display: inline-block;"><option value="vazio"></option><option value="normal" selected="true">Normal</option><option value="foil">Foil</option><option value="reversefoil">Reverse Foil</option></select></div></div></div>
-
-<div class="card" id="div" 15"=""><div class="card-inner"><div class="divTop">Phanpy</div><div style="display: inline-block;"><img id="img15" class="card-avatar" onmousemove="zoomIn(15)" onmouseout="zoomOut(15)" src="https://dz3we2x72f7ol.cloudfront.net/expansions/paldean-fates/pt-br/SV4pt5_PTBR_48.png"><img id="zoo15" class="zoom"></div><div class="divBot"><input type="text" class="inputA" onclick="select(); blur()" value="048/091" readonly=""><label id="lab15" class="labelA">●</label><select id="sel15" class="selectA" onchange="changeSel(15, this); blur()" style="display: none;"><option value="vazio"></option><option value="comum" selected="true">Comum</option><option value="incomum">Incomum	</option><option value="rara">Rara</option><option value="promo">Promocional</option><option value="raradupla">Rara Dupla</option><option value="raraultra">Rara Ultra</option><option value="fullart">Ilustração Rara</option><option value="fullartesp">Ilustração Rara Especial</option><option value="rarasecreta">Rara Secreta</option></select> <select id="ext15" class="selectB" onchange="changeExt(15, this); blur()" style="display: inline-block;"><option value="vazio"></option><option value="normal" selected="true">Normal</option><option value="foil">Foil</option><option value="reversefoil">Reverse Foil</option></select></div></div></div>
-
-<div class="card" id="div" 16"=""><div class="card-inner"><div class="divTop">Misdreavus</div><div style="display: inline-block;"><img id="img16" class="card-avatar" onmousemove="zoomIn(16)" onmouseout="zoomOut(16)" src="https://dz3we2x72f7ol.cloudfront.net/expansions/paldea-evolved/pt-br/SV02_PTBR_87.png"><img id="zoo16" class="zoom" src="https://dz3we2x72f7ol.cloudfront.net/expansions/paldea-evolved/pt-br/SV02_PTBR_87.png" style="max-width: 200%; display: none;"></div><div class="divBot"><input type="text" class="inputA" onclick="select(); blur()" value="087/193" readonly=""><label id="lab16" class="labelA">●</label><select id="sel16" class="selectA" onchange="changeSel(16, this); blur()" style="display: none;"><option value="vazio"></option><option value="comum" selected="true">Comum</option><option value="incomum">Incomum	</option><option value="rara">Rara</option><option value="promo">Promocional</option><option value="raradupla">Rara Dupla</option><option value="raraultra">Rara Ultra</option><option value="fullart">Ilustração Rara</option><option value="fullartesp">Ilustração Rara Especial</option><option value="rarasecreta">Rara Secreta</option></select> <select id="ext16" class="selectB" onchange="changeExt(16, this); blur()" style="display: inline-block;"><option value="vazio"></option><option value="normal" selected="true">Normal</option><option value="foil">Foil</option><option value="reversefoil">Reverse Foil</option></select></div></div></div>
-
-<div class="card" id="div" 17"=""><div class="card-inner"><div class="divTop">Gastly</div><div style="display: inline-block;"><img id="img17" class="card-avatar" onmousemove="zoomIn(17)" onmouseout="zoomOut(17)" src="https://dz3we2x72f7ol.cloudfront.net/expansions/paldean-fates/pt-br/SV4pt5_PTBR_55.png"><img id="zoo17" class="zoom" src="https://dz3we2x72f7ol.cloudfront.net/expansions/paldean-fates/pt-br/SV4pt5_PTBR_55.png" style="max-width: 200%; display: none;"></div><div class="divBot"><input type="text" class="inputA" onclick="select(); blur()" value="055/091" readonly=""><label id="lab17" class="labelA">●</label><select id="sel17" class="selectA" onchange="changeSel(17, this); blur()" style="display: none;"><option value="vazio"></option><option value="comum" selected="true">Comum</option><option value="incomum">Incomum	</option><option value="rara">Rara</option><option value="promo">Promocional</option><option value="raradupla">Rara Dupla</option><option value="raraultra">Rara Ultra</option><option value="fullart">Ilustração Rara</option><option value="fullartesp">Ilustração Rara Especial</option><option value="rarasecreta">Rara Secreta</option></select> <select id="ext17" class="selectB" onchange="changeExt(17, this); blur()" style="display: inline-block;"><option value="vazio"></option><option value="normal" selected="true">Normal</option><option value="foil">Foil</option><option value="reversefoil">Reverse Foil</option></select></div></div></div>
-
-		</div>	
+		<div id="divbPokemon" style="display: flex; flex-direction: row; flex-wrap: wrap;">   </div>	
+		<div id="divbItem" style="display: flex; flex-direction: row; flex-wrap: wrap;">   </div>	
+		<div id="divbApoiador" style="display: flex; flex-direction: row; flex-wrap: wrap;">   </div>	
+		<div id="divbEstadio" style="display: flex; flex-direction: row; flex-wrap: wrap;">   </div>	
+		<div id="divbFerramenta" style="display: flex; flex-direction: row; flex-wrap: wrap;">   </div>	
+		
 	</center>
 </div>
 
+
 </div>
 </div>
-</main></div>
 </div>
 
 <a class="btn show" href="#" id="back-top" role="button" title="Back To Top"></a>
@@ -213,99 +171,154 @@ img.card-avatar { width: 140px; position: relative; transition: all .2s ease-in-
 
 <script type="text/javascript">
 
-// nome ; codigo/colecao
+var gQtdCartas = 0;
+var gAbaAtiva = "bPokemon";
+var gaPokemon = [];
+			 /*["Rotom Corte|008/142|comum|Normal",
+				"Finneon|035/142|comum|Normal",
+				"Chatot|132/162|comum|Normal",
+				"Relicanth|084/162|rara|Foil",
+				"Croagunk|023/064|comum|Normal"];*/
+var gaItem = [];
+var gaApoiador = [];
+var gaEstadio = [];
+var gaFerramenta = [];
 
-function clickAdicionar() {
-    var retorno = prompt("Digite os dados da carta: ");
-	
-	if (retorno != null) {
-		var vValores = retorno.split(";");
-		var element = document.getElementById('div001');
-		var xCodigo = document.getElementsByClassName("card").length + 1;
-		
-		if (element.innerHTML == '') {element.innerHTML = '\n\n';}
-
-		element.innerHTML = element.innerHTML + '<div class="card" id="div"'+xCodigo+'"><div class="card-inner"><div class="divTop">'+vValores[0]+'</div><div style="display: inline-block;"><img id="img'+xCodigo+'" class="card-avatar" onmousemove="zoomIn('+xCodigo+')" onmouseout="zoomOut('+xCodigo+')"><img id="zoo'+xCodigo+'" class="zoom"></div><div class="divBot"><input type="text" class="inputA" onclick="select(); blur()" value="'+vValores[1]+'" readonly /><label id="lab'+xCodigo+'" class="labelA"></label><select id="sel'+xCodigo+'" class="selectA" onchange="changeSel('+xCodigo+', this); blur()"><option value="vazio"></option><option value="comum">Comum</option><option value="incomum">Incomum	</option><option value="rara">Rara</option><option value="promo">Promocional</option><option value="raradupla">Rara Dupla</option><option value="raraultra">Rara Ultra</option><option value="fullart">Ilustração Rara</option><option value="fullartesp">Ilustração Rara Especial</option><option value="rarasecreta">Rara Secreta</option></select> <select id="ext'+xCodigo+'" class="selectB" onchange="changeExt('+xCodigo+', this); blur()" style="display: none;"><option value="vazio"></option><option value="normal">Normal</option><option value="foil">Foil</option><option value="reversefoil">Reverse Foil</option></select></div></div></div>\n\n';
-		
-		carregarCarta(xCodigo, vValores[1]);
-    }
+function carregarCartas() {
+	carregarDiv('divbPokemon', gaPokemon);
+	carregarDiv('divbItem', gaItem);
+	carregarDiv('divbApoiador', gaApoiador);
+	carregarDiv('divbEstadio', gaEstadio);
+	carregarDiv('divbFerramenta', gaFerramenta);
 }
 
-function carregarCarta(pCodigo, pValorInput) {
-	if (pValorInput == '') {
-		return;	}
+function carregarDiv(pDivNome, pDivArray) {
+	
+	for (var i = 0; i < pDivArray.length; i++){
+		var vValores = pDivArray[i].split("|");
+		
+		var element = document.getElementById(pDivNome);
+		var xCodigo = gQtdCartas;
+		
+		if (element.innerHTML == '') {
+			element.innerHTML = '\n\n';}
 
-	let aValoresInput = pValorInput.split("/");	
+		element.innerHTML = element.innerHTML + '<div class="card" id="div"'+xCodigo+'"><label class="labNome">'+vValores[0]+'</label><div style="display: inline-block;"><img id="img'+xCodigo+'" class="card-avatar" onmousemove="zoomIn('+xCodigo+')" onmouseout="zoomOut('+xCodigo+')"></img><img id="zoo'+xCodigo+'" class="zoom"></img></div><div class="divBot"><input type="text" class="inpNumeracao" onclick="select(); blur()" value="'+vValores[1]+'" readonly /><label id="lab'+xCodigo+'" class="labRaridade"></label><label id="ext'+xCodigo+'" class="labExtra">'+vValores[3]+'</label></div></div>\n\n';
 
-	let vCodigoTratado = aValoresInput[0].replace(/^0+/, '');	
+		carregarImgCarta(xCodigo, vValores[1]);
+		carregarRaridade(xCodigo, vValores[2]);
+		gQtdCartas++;
+	}
+}
+
+function ativarAba(pAbaNova){
+	if (gAbaAtiva == pAbaNova){
+		return;}
+
+	// Resetar aba antiga
+	var element = document.getElementById(gAbaAtiva);
+	element.className = "titleButton";
+	element.style.color = "";
+	document.getElementById('div'+gAbaAtiva).style.display = "none";
+
+	// Ativar aba nova
+	element = document.getElementById(pAbaNova);
+	element.className = 'titleButton titleButtonClick';
+	document.getElementById('div'+pAbaNova).style.display = "flex";
+
+	gAbaAtiva = pAbaNova;
+}
+
+function carregarImgCarta(pCodigo, pNumeracao) {
+	let aValoresInput = pNumeracao.split("/");	
+	let vCodigoTratado = zeroEsquerda(aValoresInput[0]);	
 	let vEdicaoTratada = zeroEsquerda(aValoresInput[1]);
 
 	switch(vEdicaoTratada) {
 		// Promocional
-        case 'SVP':
-          document.getElementById('img'+pCodigo).src = 'https://assets.pokemon.com/static-assets/content-assets/cms2-pt-br/img/cards/web/SVP/SVP_PT-BR_'+vCodigoTratado+'.png';
-          break;
+		case 'SVP':
+			document.getElementById('img'+pCodigo).src = 'https://assets.tcgdex.net/pt/sv/svp/'+vCodigoTratado+'/high.webp';
+			break;
 		// Escarleta e Violeta
-        case '198':
-          document.getElementById('img'+pCodigo).src = 'https://dz3we2x72f7ol.cloudfront.net/expansions/scarlet-violet/pt-br/SV01_PTBR_'+vCodigoTratado+'.png';
-          break;
+		case '198':
+			document.getElementById('img'+pCodigo).src = 'https://assets.tcgdex.net/pt/sv/sv01/'+vCodigoTratado+'/high.webp';
+			//document.getElementById('img'+pCodigo).src = 'https://dz3we2x72f7ol.cloudfront.net/expansions/scarlet-violet/pt-br/SV01_PTBR_'+vCodigoTratado+'.png';
+			break;
 		// Evoluções em Paldea
         case '193':
-          document.getElementById('img'+pCodigo).src = 'https://dz3we2x72f7ol.cloudfront.net/expansions/paldea-evolved/pt-br/SV02_PTBR_'+vCodigoTratado+'.png';
-          break;
+			document.getElementById('img'+pCodigo).src = 'https://assets.tcgdex.net/pt/sv/sv02/'+vCodigoTratado+'/high.webp';
+			//document.getElementById('img'+pCodigo).src = 'https://dz3we2x72f7ol.cloudfront.net/expansions/paldea-evolved/pt-br/SV02_PTBR_'+vCodigoTratado+'.png';
+			break;
 		// Obsidiana em Chamas
-        case '197':
-          document.getElementById('img'+pCodigo).src = 'https://dz3we2x72f7ol.cloudfront.net/expansions/obsidian-flames/pt-br/SV03_PTBR_'+vCodigoTratado+'.png';
-          break;
+		case '197':
+			document.getElementById('img'+pCodigo).src = 'https://assets.tcgdex.net/pt/sv/sv03/'+vCodigoTratado+'/high.webp';
+			//document.getElementById('img'+pCodigo).src = 'https://dz3we2x72f7ol.cloudfront.net/expansions/obsidian-flames/pt-br/SV03_PTBR_'+vCodigoTratado+'.png';
+			break;
 		// 151
-        case '165':
-          document.getElementById('img'+pCodigo).src = 'https://dz3we2x72f7ol.cloudfront.net/expansions/151/pt-br/SV3pt5_PTBR_'+vCodigoTratado+'.png';
-          break;
+		case '165':
+			document.getElementById('img'+pCodigo).src = 'https://assets.tcgdex.net/pt/sv/sv03.5/'+vCodigoTratado+'/high.webp';
+			//document.getElementById('img'+pCodigo).src = 'https://dz3we2x72f7ol.cloudfront.net/expansions/151/pt-br/SV3pt5_PTBR_'+vCodigoTratado+'.png';
+			break;
 		// Fenda Paradoxal
-        case '182':
-          document.getElementById('img'+pCodigo).src = 'https://dz3we2x72f7ol.cloudfront.net/expansions/paradox-rift/pt-br/SV04_PTBR_'+vCodigoTratado+'.png';
-          break; 
+		case '182':
+			document.getElementById('img'+pCodigo).src = 'https://assets.tcgdex.net/pt/sv/sv04/'+vCodigoTratado+'/high.webp';
+			//document.getElementById('img'+pCodigo).src = 'https://dz3we2x72f7ol.cloudfront.net/expansions/paradox-rift/pt-br/SV04_PTBR_'+vCodigoTratado+'.png';
+			break; 
 		// Destinos de Paldea
-        case '091':
-          document.getElementById('img'+pCodigo).src = 'https://dz3we2x72f7ol.cloudfront.net/expansions/paldean-fates/pt-br/SV4pt5_PTBR_'+vCodigoTratado+'.png';
-          break;
+		case '091':
+			document.getElementById('img'+pCodigo).src = 'https://assets.tcgdex.net/pt/sv/sv04.5/'+vCodigoTratado+'/high.webp';
+			//document.getElementById('img'+pCodigo).src = 'https://dz3we2x72f7ol.cloudfront.net/expansions/paldean-fates/pt-br/SV4pt5_PTBR_'+vCodigoTratado+'.png';
+			break;
 		// Forças Temporais
-        case '162':
-          document.getElementById('img'+pCodigo).src = 'https://dz3we2x72f7ol.cloudfront.net/expansions/temporal-forces/pt-br/SV05_PTBR_'+vCodigoTratado+'.png';
-          break;
+		case '162':
+			document.getElementById('img'+pCodigo).src = 'https://assets.tcgdex.net/pt/sv/sv05/'+vCodigoTratado+'/high.webp';
+			//document.getElementById('img'+pCodigo).src = 'https://dz3we2x72f7ol.cloudfront.net/expansions/temporal-forces/pt-br/SV05_PTBR_'+vCodigoTratado+'.png';
+			break;
 		// Máscaras do Crepúsculo
-        case '167':
-          document.getElementById('img'+pCodigo).src = 'https://dz3we2x72f7ol.cloudfront.net/expansions/twilight-masquerade/pt-br/SV06_PTBR_'+vCodigoTratado+'.png';
-          break;
+		case '167':
+			document.getElementById('img'+pCodigo).src = 'https://assets.tcgdex.net/pt/sv/sv06/'+vCodigoTratado+'/high.webp';
+			//document.getElementById('img'+pCodigo).src = 'https://dz3we2x72f7ol.cloudfront.net/expansions/twilight-masquerade/pt-br/SV06_PTBR_'+vCodigoTratado+'.png';
+			break;
 		// Fábulas Nebulosas
-        case '064':
-          document.getElementById('img'+pCodigo).src = 'https://dz3we2x72f7ol.cloudfront.net/expansions/shrouded-fable/pt-br/SV6pt5_PTBR_'+vCodigoTratado+'.png';
-          break;
+		case '064':
+			document.getElementById('img'+pCodigo).src = 'https://assets.tcgdex.net/pt/sv/sv06.5/'+vCodigoTratado+'/high.webp';
+			//document.getElementById('img'+pCodigo).src = 'https://dz3we2x72f7ol.cloudfront.net/expansions/shrouded-fable/pt-br/SV6pt5_PTBR_'+vCodigoTratado+'.png';
+			break;
 		// Coroa Estelar
-        case '142':
-          document.getElementById('img'+pCodigo).src = 'https://dz3we2x72f7ol.cloudfront.net/expansions/stellar-crown/pt-br/SV07_PTBR_'+vCodigoTratado+'.png';
-          break;
+		case '142':
+			document.getElementById('img'+pCodigo).src = 'https://assets.tcgdex.net/pt/sv/sv07/'+vCodigoTratado+'/high.webp';
+			//document.getElementById('img'+pCodigo).src = 'https://dz3we2x72f7ol.cloudfront.net/expansions/stellar-crown/pt-br/SV07_PTBR_'+vCodigoTratado+'.png';
+			break;
 		// Fagulhas Impetuosas
-        case '191':
-          document.getElementById('img'+pCodigo).src = 'https://dz3we2x72f7ol.cloudfront.net/expansions/surging-sparks/pt-br/SV08_PTBR_'+vCodigoTratado+'.png';
-          break;
-        /*case '':
-          document.getElementById('img'+pCodigo).src = ''+aValoresInput[0]+'.png';
-          break;*/
-
-        default:
-          alert('Coleção não encontrada');
-		  //carregarImagem(pCodigo, true); 
-	} 
+		case '191':
+			document.getElementById('img'+pCodigo).src = 'https://assets.tcgdex.net/pt/sv/sv08/'+vCodigoTratado+'/high.webp';
+			//document.getElementById('img'+pCodigo).src = 'https://dz3we2x72f7ol.cloudfront.net/expansions/surging-sparks/pt-br/SV08_PTBR_'+vCodigoTratado+'.png';
+			break;
+		// Evoluções Prismáticas
+        case '':
+			document.getElementById('img'+pCodigo).src = 'https://assets.tcgdex.net/pt/sv/sv08.5/'+vCodigoTratado+'/high.webp';
+			//document.getElementById('img'+pCodigo).src = ''+aValoresInput[0]+'.png';
+			break;
+	}
 }
   
 var xModoZoom = 1;
 function zoomIn(pCodigo) {	
 	if (xModoZoom == 1) {
+		var vWindowWidth = window.innerWidth;
+		var vImgRigth = document.getElementById("img"+pCodigo).getBoundingClientRect().right;
+		var vEspaco = vWindowWidth - vImgRigth;
 		var element = document.getElementById("zoo"+pCodigo);
 		element.src = document.getElementById("img"+pCodigo).src;
 		element.style.maxWidth = "200%";
 		element.style.display = "inline-block";
+		
+		//if (vEspaco < 450) {
+		if (vEspaco < 760) {
+			element.style.transform = "translate(-159%, -24.4%)";
+		} else {
+			element.style.transform = "translate(9%, -24.4%)";
+		}
 	} else {
 		var element = document.getElementById("img"+pCodigo);
 		element.style.zIndex = "99";
@@ -324,79 +337,42 @@ function zoomOut(pCodigo) {
 	}
 }
 
-function changeSel(pCodigo, pSelect) {
-	carregarRaridade(pCodigo, pSelect.value);
-	
-	pSelect.options[0].removeAttribute('selected');
-	pSelect.options[1].removeAttribute('selected');
-	pSelect.options[2].removeAttribute('selected');
-	pSelect.options[3].removeAttribute('selected');
-	pSelect.options[4].removeAttribute('selected');
-	pSelect.options[5].removeAttribute('selected');
-	pSelect.options[6].removeAttribute('selected');
-	pSelect.options[7].removeAttribute('selected');
-	pSelect.options[8].removeAttribute('selected');
-	pSelect.options[9].removeAttribute('selected');
-	
-	pSelect.options[pSelect.options.selectedIndex].setAttribute('selected', 'true');
-}
-
-function changeExt(pCodigo, pSelect) {
-	pSelect.options[0].removeAttribute('selected');
-	pSelect.options[1].removeAttribute('selected');
-	pSelect.options[2].removeAttribute('selected');
-	pSelect.options[3].removeAttribute('selected');
-	
-	pSelect.options[pSelect.options.selectedIndex].setAttribute('selected', 'true');	
-	
-	if (pSelect.value == 'vazio') {
-		document.getElementById('sel'+pCodigo).style.display = "inline-block";
-		document.getElementById('ext'+pCodigo).style.display = "none";
-	}
-}
-
 //   ●♦★✩    🌟⭐◆
 function carregarRaridade(pCodigo, pRaridade) {
 	switch(pRaridade) {
 		case 'comum':
+			document.getElementById('lab'+pCodigo).style.paddingTop = "3px";
 			document.getElementById('lab'+pCodigo).innerHTML = "●";
-			document.getElementById('ext'+pCodigo).style.display = "inline-block";
-			document.getElementById('sel'+pCodigo).style.display = "none";
 			break;
 		case 'incomum':
 			document.getElementById('lab'+pCodigo).innerHTML = "♦";
-			document.getElementById('ext'+pCodigo).style.display = "inline-block";
-			document.getElementById('sel'+pCodigo).style.display = "none";
 			break;
 		case 'rara':
 			document.getElementById('lab'+pCodigo).innerHTML = "★";
-			document.getElementById('ext'+pCodigo).style.display = "inline-block";
-			document.getElementById('sel'+pCodigo).style.display = "none";
 			break;
 		case 'promo':
 			document.getElementById('lab'+pCodigo).innerHTML = "✩";
-			document.getElementById('ext'+pCodigo).value = "vazio";
-			
+			document.getElementById('ext'+pCodigo).innerHTML = "Promocional";
 			break;
 		case 'raradupla':
 			document.getElementById('lab'+pCodigo).innerHTML = "★★";
-			document.getElementById('ext'+pCodigo).value = "vazio";
+			document.getElementById('ext'+pCodigo).innerHTML = "Rara Dupla";
 			break;
 		case 'raraultra':
 			document.getElementById('lab'+pCodigo).innerHTML = "<div style='color:#A7A9AD;'>★★</div>";
-			document.getElementById('ext'+pCodigo).value = "vazio";
+			document.getElementById('ext'+pCodigo).innerHTML = "Rara Ultra";
 			break;
-		case 'fullart':
+		case 'ilustrara':
 			document.getElementById('lab'+pCodigo).innerHTML = "<div style='color:#FCB912;'>★</div>";
-			document.getElementById('ext'+pCodigo).value = "vazio";
+			document.getElementById('ext'+pCodigo).innerHTML = "Ilustração Rara";
 			break;
-		case 'fullartesp':
+		case 'ilustraraesp':
 			document.getElementById('lab'+pCodigo).innerHTML = "<div style='color:#FCB912;'>★★</div>";
-			document.getElementById('ext'+pCodigo).value = "vazio";
+			document.getElementById('ext'+pCodigo).innerHTML = "Ilust. Rara Especial";
 			break;
 		case 'rarasecreta':
-			document.getElementById('lab'+pCodigo).innerHTML = "<div style='width: 23px; position: relative; top: -6px; color:#FCB912;'>★<br>★★</div>";
-			document.getElementById('ext'+pCodigo).value = "vazio";
+			document.getElementById('lab'+pCodigo).innerHTML = "<div style='width: 23px; position: relative; top: -4px; color:#FCB912;'>★<br>★★</div>";
+			document.getElementById('ext'+	pCodigo).innerHTML = "Rara Secreta";
 			break;
 
 		default:
@@ -408,15 +384,6 @@ function zeroEsquerda(str) {
   const resto = 3 - String(str).length;
   return '0'.repeat(resto > 0 ? resto : '0') + str;
 }
-
-/* 
-alert();
-document.getElementById("div1").removeAttribute("disabled");
-const aValores = vValores.split(",");
-
-img.card-avatar {
-    width: 110px;
-*/
 
 </script>
 
