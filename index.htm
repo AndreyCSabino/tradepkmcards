@@ -173,7 +173,9 @@ img.card-avatar { width: 100%; position: relative; transition: all .2s ease-in-o
 
 var gQtdCartas = 0;
 var gAbaAtiva = "bPokemon";
-var gaPokemon = ["Rotom Corte|008/142|comum|Normal"];
+var gaPokemon = ["Rotom Corte|008/142|comum|Normal",
+				 "Chatot|132/162|incomum|Normal",
+				 "Finneon|035/142|rara|"];
 			 /*["Rotom Corte|008/142|comum|Normal",
 				"Finneon|035/142|comum|Normal",
 				"Chatot|132/162|comum|Normal",
@@ -341,11 +343,10 @@ function zoomOut(pCodigo) {
 function carregarRaridade(pCodigo, pRaridade) {
 	switch(pRaridade) {
 		case 'comum':
-			document.getElementById('lab'+pCodigo).style.paddingTop = "3px";
-			document.getElementById('lab'+pCodigo).innerHTML = "●";
+			document.getElementById('lab'+pCodigo).innerHTML = "<div style='font-size:10px; line-height: 0.8;'>⬤</div>";
 			break;
 		case 'incomum':
-			document.getElementById('lab'+pCodigo).innerHTML = "♦";
+			document.getElementById('lab'+pCodigo).innerHTML = "<div style='font-size:14px; line-height: 0.7;'>⯁</div>";
 			break;
 		case 'rara':
 			document.getElementById('lab'+pCodigo).innerHTML = "★";
